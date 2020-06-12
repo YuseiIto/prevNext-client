@@ -3,7 +3,7 @@ import keyboard
 import websocket
 
 # Preferences
-path = 'ws://localhost:50000/'
+path = 'ws://nextprev.yuseiito.com/'
 IS_DEBUG_MODE = False
 
 
