@@ -8,7 +8,6 @@ path = 'ws://localhost:50000/'
 IS_DEBUG_MODE = False
 
 
-keyboard.press_and_release('shift+s, space')
 keyboard.write('The quick brown fox jumps over the lazy dog.')
 
 if IS_DEBUG_MODE:
@@ -16,16 +15,17 @@ if IS_DEBUG_MODE:
 
 ws = websocket.WebSocket()
 ws.connect(path)
-print("Sending 'Hello, World'...")
-ws.send("Hello, World")
-print("Sent")
-print("Receiving...")
-result = ws.recv()
-print("Received '%s'" % result)
-ws.close()
+ws.send("ready")
 
-""" 
-while True:
-    keyboard.send('enter')
-    print("Change LIne!")
-    time.sleep(0.8) """
+
+while ws.connected:
+    message = ws.recv()
+    if message == 'next':
+        keyboard.send('right')
+        print("next")
+    if message == 'prev':
+        keyboard.send('left')
+        print("prev")
+
+print("Websocket disconnected!")
+ws.close()
