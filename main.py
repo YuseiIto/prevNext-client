@@ -13,6 +13,7 @@ print("Remote-presentation-support")
 print("Created by Yusei Ito")
 print("- - - - - - - - - - ")
 print("Target server: " + path)
+print("Space ID: " + spaceId)
 
 if IS_DEBUG_MODE:
     websocket.enableTrace(True)
