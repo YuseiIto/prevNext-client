@@ -4,7 +4,7 @@ import websocket
 import sys
 
 # Preferences
-path = 'ws://server.nextprev.yuseiito.com/'
+path = 'ws://server.prevnext.yuseiito.com/'
 IS_DEBUG_MODE = False
 
 spaceId = str(sys.argv[1])
