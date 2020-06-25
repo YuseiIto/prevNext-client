@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="prevNext",
-    version="0.0.1",
+    version="0.1.0",
     author="Yusei Ito",
     author_email="yuseikun.prevNext@outlook.jp",
     description="prevNext makes your remote presentation smarter.",
