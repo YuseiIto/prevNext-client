@@ -5,7 +5,7 @@
 
 ## 実行方法
 
-```
+```zsh
 $ prevNext 1234
 ```
 
@@ -13,3 +13,12 @@ $ prevNext 1234
 [Web tool](https://prevNext.yuseiito.com/)で設定されたスペース ID を入力してください。
 
 ![スペースIDはWeb toolのテキストボックスに表示されている](./operator_spaceId.png)
+
+## インストール
+
+prevNext は Python3 で実装されています。
+インストールは、`pip` 経由で行います。
+
+```zsh
+$ pip install git+https://github.com/yuseiito/prevNext-client
+```
