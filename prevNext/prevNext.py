@@ -1,19 +1,33 @@
 import time
-import keyboard
-import websocket
+# import keyboard
+# import websocket
 import sys
+
 
 # Preferences
 path = 'ws://server.prevnext.yuseiito.com/'
 IS_DEBUG_MODE = False
 
-spaceId = str(sys.argv[1])
+try:
+    spaceId = str(sys.argv[1])
+except IndexError as e:
+    print(
+        "\033[31mError: The space id is not provided. Please run command like `prevNext 1234`\033[m")
+    sys.exit()
 
-print("Remote-presentation-support")
-print("Created by Yusei Ito")
-print("- - - - - - - - - - ")
-print("Target server: " + path)
-print("Space ID: " + spaceId)
+
+if spaceId == "-v":
+    print("0.1.0")
+    sys.exit()
+else:
+    print("\033[Space ID: " + spaceId + "\033[m")
+
+
+print("\033[32m\033[1m prevNext \033[m")
+print("\033[32m Remote presentation application. \033[m")
+print("\033[32mCreated by Yusei Ito\033[m")
+print("\033[32m- - - - - - - - - - \033[m")
+print("\033[32mTarget server: " + path + "\033[m")
 
 if IS_DEBUG_MODE:
     websocket.enableTrace(True)
