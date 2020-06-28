@@ -1,6 +1,6 @@
 import time
-# import keyboard
-# import websocket
+import keyboard
+import websocket
 import sys
 
 
